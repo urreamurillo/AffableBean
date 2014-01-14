@@ -17,7 +17,7 @@
 
 <!--The @WebServlet annotation is used in the ControllerServlet instead of
     the <servlet> and <servlet-mapping> entries below-->
-<!--<servlet>
+    <servlet>
         <servlet-name>Controller</servlet-name>
         <servlet-class>controller.ControllerServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
@@ -32,8 +32,8 @@
         <url-pattern>/checkout</url-pattern>
         <url-pattern>/purchase</url-pattern>
         <url-pattern>/chooseLanguage</url-pattern>
-    </servlet-mapping>-->
-
+    </servlet-mapping>
+    
     <context-param>
         <description>The relative path to product images</description>
         <param-name>productImagePath</param-name>
@@ -64,18 +64,18 @@
     </session-config>
 
 <!--Not required for Servlet 3.0 - index.jsp is default-->
-<!--<welcome-file-list>
+    <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>-->
+    </welcome-file-list>
 
 <!--This is only needed for testing the datasource (TestDataSource.jsp)-->
-<!--<resource-ref>
+    <resource-ref>
         <description>jdbc:mysql://localhost:3306/affablebean</description>
         <res-ref-name>jdbc/affablebean</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
         <res-sharing-scope>Shareable</res-sharing-scope>
-    </resource-ref>-->
+    </resource-ref>
 
     <jsp-config>
         <jsp-property-group>
@@ -136,7 +136,7 @@
 
 <!--Annotations in the AdminServlet (@ServletSecurity and @HttpConstraint) are
     used instead of the <security-constraint> entry below-->
-<!--<security-constraint>
+    <security-constraint>
         <display-name>Admin</display-name>
         <web-resource-collection>
             <web-resource-name>Affable Bean Administration</web-resource-name>
@@ -148,12 +148,12 @@
         <user-data-constraint>
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
-    </security-constraint>-->
+    </security-constraint>
 
 <!--The <security-role> entry is not required if role is declared using @HttpConstraint annotation-->
-<!--<security-role>
+    <security-role>
         <description>access to administration console</description>
         <role-name>affableBeanAdmin</role-name>
-    </security-role>-->
+    </security-role>
 
 </web-app>
